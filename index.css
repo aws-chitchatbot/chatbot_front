@@ -181,8 +181,7 @@
 .inform-message-div{
   border: none;
   display:flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
 .inform-message{
   width: auto;
@@ -205,6 +204,7 @@
 .enterChat-div{
   /* position: absolute; */
   width:100%;
+  height:15%;
   display: flex;
   justify-content: center;
 }

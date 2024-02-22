@@ -1,3 +1,4 @@
+//창 width, height 구하기
 var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
@@ -5,6 +6,8 @@ document.documentElement.style.setProperty('--windowWidth', windowWidth + 'px');
 document.documentElement.style.setProperty('--windowHeight', windowHeight + 'px');
 
 
+
+//채팅방추가 버튼 후 액션
 document.getElementById("addchatroomBtn").addEventListener("click", function() {
     // 새로운 div 요소 생성
     var newDiv = document.createElement("div");
@@ -18,22 +21,17 @@ document.getElementById("addchatroomBtn").addEventListener("click", function() {
 });
 
 
-//chitchatbot 기본 질문 message width 자동 계산
-window.onload = function() {
-    var informMessages = document.querySelectorAll('.inform-message');
 
-    informMessages.forEach(function(button) {
-        var message = button.querySelector('.message');
-        var messageText = message.textContent.trim();
-        var messageLength = messageText.length;
+// 첫번째 기본 질문 message1에 대입
+document.addEventListener("DOMContentLoaded", function() {
+    // message1 변수에 텍스트를 저장
+    var message1 = "ChitChatBot은 어떤 서비스야?";
+  
+    // HTML 요소에 동적으로 텍스트를 삽입
+    document.getElementById('messageElement1').textContent = message1;
+  });
 
-        // 글자 수에 따라 너비 조절
-        button.style.width = messageLength * 16 + 'px'; // 예시로 1글자당 10px의 너비를 설정합니다.
-    });
-};
-
-
-// 첫번째 기본 질문
+// 첫번째 기본 질문에 대한 답변
 document.getElementById("defaultMessageBtn1").addEventListener("click", function() {
     var chattingDiv = document.querySelector('.chatting-div');
 
@@ -47,8 +45,24 @@ document.getElementById("defaultMessageBtn1").addEventListener("click", function
 
     // .chatting-div 요소의 맨 아래에 새로운 채팅을 추가
     chattingDiv.appendChild(newChat);
+
+    //가장 하단으로 이동
+    var parentDiv = document.querySelector('.chatting-div');
+    parentDiv.scrollTop = parentDiv.scrollHeight;
 });
-// 두번째 기본 질문
+
+
+
+// 두번째 기본 질문 message2에 대입
+document.addEventListener("DOMContentLoaded", function() {
+    // message2 변수에 텍스트를 저장
+    var message2 = "단체톡방에 봇 추가하는 방법 알려줘";
+  
+    // HTML 요소에 동적으로 텍스트를 삽입
+    document.getElementById('messageElement2').textContent = message2;
+  });
+
+// 두번째 기본 질문에 대한 답변
 document.getElementById("defaultMessageBtn2").addEventListener("click", function() {
     var chattingDiv = document.querySelector('.chatting-div');
 
@@ -62,8 +76,24 @@ document.getElementById("defaultMessageBtn2").addEventListener("click", function
 
     // .chatting-div 요소의 맨 아래에 새로운 채팅을 추가
     chattingDiv.appendChild(newChat);
+
+    //가장 하단으로 이동
+    var parentDiv = document.querySelector('.chatting-div');
+    parentDiv.scrollTop = parentDiv.scrollHeight;
 });
-// 세번째 기본 질문
+
+
+
+// 세번째 기본 질문 message3에 대입
+document.addEventListener("DOMContentLoaded", function() {
+    // message3 변수에 텍스트를 저장
+    var message3 = "채팅방 추가는 어떻게 하는거야?";
+  
+    // HTML 요소에 동적으로 텍스트를 삽입
+    document.getElementById('messageElement3').textContent = message3;
+  });
+
+// 세번째 기본 질문에 대한 답변
 document.getElementById("defaultMessageBtn3").addEventListener("click", function() {
     var chattingDiv = document.querySelector('.chatting-div');
 
@@ -77,6 +107,10 @@ document.getElementById("defaultMessageBtn3").addEventListener("click", function
 
     // .chatting-div 요소의 맨 아래에 새로운 채팅을 추가
     chattingDiv.appendChild(newChat);
+
+    //가장 하단으로 이동
+    var parentDiv = document.querySelector('.chatting-div');
+    parentDiv.scrollTop = parentDiv.scrollHeight;
 });
 
 
