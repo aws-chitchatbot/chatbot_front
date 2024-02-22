@@ -20,7 +20,14 @@ document.getElementById("addchatroomBtn").addEventListener("click", function() {
     document.getElementById("chatroomList").appendChild(newDiv);
 });
 
-
+//챗봇 인사말 helloMsg1에 대입
+document.addEventListener("DOMContentLoaded", function() {
+    // message1 변수에 텍스트를 저장
+    var message0 = "안녕하세요. ChitChatBot입니다. 처음 서비스를 이용하신다면 다음 질문들을 눌러 사용법을 알아보세요";
+  
+    // HTML 요소에 동적으로 텍스트를 삽입
+    document.getElementById('helloMsg1').textContent = message0;
+  });
 
 // 첫번째 기본 질문 message1에 대입
 document.addEventListener("DOMContentLoaded", function() {
